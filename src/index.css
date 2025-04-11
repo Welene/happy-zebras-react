@@ -1,0 +1,14 @@
+:root {
+	/* lägg till variabler som kan återanvändas här - färger, font-styles */
+
+	/* sen för att hämta/använda denna variabel (exempel): 
+  '.indexpage__section {
+      background-color: var(NamnPåVariabel)';
+  } */
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
