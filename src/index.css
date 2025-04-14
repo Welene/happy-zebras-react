@@ -12,3 +12,13 @@
 	margin: 0;
 	padding: 0;
 }
+
+.app {
+	max-width: 1100px;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+.page {
+	min-height: 100vh;
+}
