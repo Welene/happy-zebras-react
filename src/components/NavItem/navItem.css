@@ -1,0 +1,9 @@
+.navigation-section {
+}
+
+.navigation-section__favorites {
+	color: var(--yellow-clr);
+	text-decoration: none;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+}

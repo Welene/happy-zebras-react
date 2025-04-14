@@ -5,6 +5,11 @@
   '.indexpage__section {
       background-color: var(NamnPåVariabel)';
   } */
+
+	--black-bg: #000000;
+	--dark-grey-bg: #rgb(20, 20, 20);
+	--light-grey-clr: #999999;
+	--yellow-clr: #f5f119;
 }
 
 * {
@@ -21,4 +26,5 @@
 
 .page {
 	min-height: 100vh;
+	background-color: var(--black-bg);
 }

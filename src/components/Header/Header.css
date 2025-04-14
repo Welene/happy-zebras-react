@@ -1,0 +1,12 @@
+.header-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem;
+}
+
+.header-section__logo {
+	background-color: var(--yellow-clr);
+	max-width: 12rem;
+}
