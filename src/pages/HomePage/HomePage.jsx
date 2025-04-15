@@ -17,7 +17,7 @@ const HomePage = () => {
 			try {
 				const res = await fetch('https://santosnr6.github.io/Data/favoritemovies.json');
 				if (!res.ok) throw new Error('Failed to fetch movie data.');
-				const data = await res.jason();
+				const data = await res.json();
 				setRecommendedMovies(data);
 
 			} catch (err) {
@@ -38,15 +38,14 @@ const HomePage = () => {
 			<main>
 				{/* Trailor Carousel from Helene */}
 				<section className='carousel-section'>
-					<Carousel />
+					{/*<Carousel />*/}
 				</section>
 
 
 				<section className='recommendation-section'>
-					<h2>🎬 Our Recommendations 🎬  </h2>
 					{loading && <p>Loading...</p>}
 					{error && <p className='error'>{error}</p>}
-					{!loading && !error && <MovieList movies={recommendedMovies} />}
+					{!loading && !error && <MovieList movieList={recommendedMovies} title={'🎬 Our Recommendations 🎬'} />}
 				</section>
 
 			</main>
