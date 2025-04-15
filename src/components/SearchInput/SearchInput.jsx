@@ -24,8 +24,15 @@ function SearchInput() {
 				// input field listenes to a change (writing = change), takes that change and updates my setSearchValue to hold that user input
 			/>
 			<button
+				// Checking if input is empty - if empty - prevents navigation
 				className="search-section__btn"
-				onClick={() => handleSearch(navigate, searchValue)}>
+				onClick={() => {
+					if (searchValue === '') {
+						return;
+					} else {
+						handleSearch(navigate, searchValue);
+					}
+				}}>
 				{/* button listens to a click - when clicked - calls handleSearch function and sends 'navigate' & 'searchValue' prop with it */}
 				Search
 			</button>
