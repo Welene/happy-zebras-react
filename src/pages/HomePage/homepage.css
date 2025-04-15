@@ -1,23 +1,54 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-
+/* GENERAL STYLING */
 .page-home {
-	background-color:black;
-	padding: 1rem;
-}  
-
-
-.recommendation-section {
-	padding: 2rem;
-	text-align: center;
+	background-color: #000;
+	color: #fff;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
 
+.list-section__header {
+	padding: 1rem;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: capitalize;
+	
+}
 
-.recommendation-section h2 {
-	font-size: 2rem;
-	margin-bottom: 1.5rem;
+/* FAVORITE STAR BUTTON */
+.favorite-card-container {
+	position: relative;
+	display: inline-block;
+}
+
+.favorite-btn {
+	position: absolute;
+	right: 0px;
+	background: #6c6969;
+	border-radius: 0px;
+	border: none;
+	font-size: 28px;
+	color:rgb(252, 181, 1);
+	padding: 6px;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+	z-index: 10;
+}
+
+.favorite-btn:hover {
+	transform: scale(1.03);
+}
+
+.favorite-btn::before {
+	content: "☆";
+}
+
+.favorite-btn.favorite::before {
+	content: "⭐";
+}
+
+/* Wrapper around MovieItem to keep spacing aligned */
+.movie-card-wrapper {
+	list-style: none;
+	position: relative;
 }
