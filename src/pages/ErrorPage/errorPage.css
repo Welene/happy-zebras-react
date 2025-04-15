@@ -1,3 +1,36 @@
 .page-error {
 	margin: 2rem;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	text-align: center;
+}
+
+.page-error__image-container {
+	max-width: 200px;
+	height: 200px;
+}
+
+.page-error__image-container img {
+	max-width: 100%;
+	height: 100%;
+	margin-left: 0.7rem;
+	margin-top: 2rem;
+}
+
+.page-error__button {
+	padding: 0.7rem 1rem;
+	font-weight: 700;
+	text-decoration: none;
+	background-color: var(--yellow-clr);
+	border-radius: 4px;
+	color: var(--dark-grey-bg);
+	transition: 0.1s all ease-in-out;
+}
+
+.page-error__button:hover {
+	opacity: 0.8;
 }
