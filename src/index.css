@@ -6,7 +6,7 @@
       background-color: var(NamnPåVariabel)';
   } */
 
-	--black-bg-color: #000000;
+	--black-bg: #000000;
 }
 
 * {
@@ -16,7 +16,7 @@
 }
 
 body {
-	background-color: var(--black-bg-color);
+	background-color: var(--black-bg);
 	font-family: Arial, sans-serif;
 }
 
