@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+.page-home {
+	background-color:black;
+	padding: 1rem;
+}  
+
+
+.recommendation-section {
+	padding: 2rem;
+	text-align: center;
+}
+
+
+.recommendation-section h2 {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+}
