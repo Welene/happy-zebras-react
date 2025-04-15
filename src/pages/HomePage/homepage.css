@@ -4,20 +4,52 @@
 	padding: 0;
 }
 
-
 .page-home {
-	background-color:black;
-	padding: 1rem;
-}  
-
+	background-color: var(--primary-bg);
+}
 
 .recommendation-section {
 	padding: 2rem;
 	text-align: center;
 }
 
-
 .recommendation-section h2 {
 	font-size: 2rem;
 	margin-bottom: 1.5rem;
+}
+
+/* carousel-*SECTION*-only styling */
+
+.carousel-section {
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 2rem;
+	min-height: 30rem;
+	border-bottom: 1px solid white;
+	margin-bottom: 2rem;
+	transform: scale(0.85);
+	transform-origin: center;
+}
+
+.carousel-section::before,
+.carousel-section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 25%;
+	z-index: 3;
+}
+
+.carousel-section::before {
+	background: linear-gradient(to right, var(--primary-bg) 20%, transparent);
+	left: 0px;
+}
+
+.carousel-section::after {
+	background: linear-gradient(to left, var(--primary-bg) 20%, transparent);
+	right: 0px;
 }
