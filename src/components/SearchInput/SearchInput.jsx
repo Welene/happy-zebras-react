@@ -19,6 +19,7 @@ function SearchInputValue() {
 	// Lager en useState variabel til verdien man skriver inn i input-feltet
 	const navigate = useNavigate();
 	// en hook fra react-biblioteket - lar deg bruke en funksjon (navigate-funksjonen) til å navigere når den anropes
+	onClick('search-section__btn');
 }
 
 export default SearchInput;
