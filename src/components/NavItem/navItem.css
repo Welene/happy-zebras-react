@@ -1,13 +1,11 @@
-.navigation-section {
-}
-
 .navigation-section__favorites {
 	color: var(--yellow-clr);
 	text-decoration: none;
+	font-size: 1.2rem;
 	font-weight: 700;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 .navigation-section__favorites:hover {
-	color: yellow;
+	color: rgb(255, 230, 0);
 }
