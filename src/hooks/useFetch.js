@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import useFetch from './hooks/useFetch';
 
 export const useFetch = (url) => {
 	const [data, setData] = useState(null);

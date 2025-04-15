@@ -2,11 +2,14 @@
 	/* lägg till variabler som kan återanvändas här - färger, font-styles */
 
 	/* sen för att hämta/använda denna variabel (exempel): 
-  '.indexpage__section {
-      background-color: var(NamnPåVariabel)';
+'.indexpage__section {
+    background-color: var(NamnPåVariabel)';
   } */
 
 	--black-bg: #000000;
+	--dark-grey-bg: #181818;
+	--light-grey-clr: #999999;
+	--yellow-clr: #ecc901;
 }
 
 * {
@@ -28,4 +31,5 @@ body {
 
 .page {
 	min-height: 100vh;
+	background-color: var(--black-bg);
 }
