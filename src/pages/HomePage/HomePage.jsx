@@ -1,11 +1,58 @@
-import React from 'react';
+import './homePage.css';
+import Header from '../../components/Header/Header';
+import MovieList from '../../components/MovieList/MovieList';
 
-function HomePage() {
+import React from 'react';
+import { useState, useEffect } from 'react';
+
+const HomePage = () => {
+	const [recommendedMovies, setRecommendedMovies] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+
+
+	useEffect(() => {
+
+		const fectchRecommendedMovies = async () => {
+			try {
+				const res = await fetch('https://santosnr6.github.io/Data/favoritemovies.json');
+				if (!res.ok) throw new Error('Failed to fetch movie data.');
+				const data = await res.json();
+				setRecommendedMovies(data);
+
+			} catch (err) {
+				setError(err.message);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fectchRecommendedMovies();
+
+	}, []);
+
 	return (
-		<section className="page page-home">
-			<h1 className="TEST">TESTTEST</h1>
-		</section>
+		<div className="page page-home">
+
+			<Header />
+			<main>
+				{/* Trailor Carousel from Helene */}
+				<section className='carousel-section'>
+					{/*<Carousel />*/}
+				</section>
+
+
+				<section className='recommendation-section'>
+					{loading && <p>Loading...</p>}
+					{error && <p className='error'>{error}</p>}
+					{!loading && !error && <MovieList movieList={recommendedMovies} title={'🎬 Our Recommendations 🎬'} />}
+				</section>
+
+			</main>
+
+		</div>
 	);
-}
+
+};
 
 export default HomePage;
