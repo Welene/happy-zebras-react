@@ -4,7 +4,12 @@ import React, { useEffect, useState } from 'react';
 
 // import { ReactComponent as StarIcon } from '../../assets/star.svg';
 
-function FavoriteButton({ movie, toggleFavorites, isFavorite }) {
+function FavoriteButton({
+	movie,
+	toggleFavorites,
+	isFavorite,
+	position = 'absolute',
+}) {
 	const [isFilled, setIsFilled] = useState(false);
 	// const { favorites, toggleFavorites, isFavorite } =
 	// 	useLocalStorageFavorites();
@@ -19,7 +24,12 @@ function FavoriteButton({ movie, toggleFavorites, isFavorite }) {
 	};
 
 	return (
-		<button className="favorite-btn" onClick={handleClick}>
+		<button
+			aria-label={`Mark ${movie.Title} as favorite`}
+			className={`favorite-btn ${
+				position === 'relative' ? 'relative' : 'absolute'
+			}`}
+			onClick={handleClick}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 -4 24 29"

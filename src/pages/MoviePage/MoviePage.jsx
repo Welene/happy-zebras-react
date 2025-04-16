@@ -67,6 +67,7 @@ const MoviePage = () => {
 							toggleFavorites={toggleFavorites}
 							isFavorite={isFavorite}
 							movie={movie}
+							position="relative"
 						/>
 						<hr className="section-divider" />
 						<p className="movie-info-top">

@@ -25,7 +25,7 @@ function MovieItem({ movie, toggleFavorites, isFavorite }) {
 				/>
 				<img
 					src={poster} // Ternär operator för att kontrollera om en poster finns
-					alt={movie.Title}
+					alt={`poster of ${movie.Title}`}
 				/>
 			</figure>
 			<Link to={`/movie/${movie.imdbID}`} className="movie-item__title">
