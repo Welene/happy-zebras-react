@@ -1,14 +1,27 @@
-import React from 'react';
+import './favoritePage.css';
 import Header from '../../components/Header/Header';
+import MovieList from '../../components/MovieList/MovieList';
+import { useLocalStorageFavorites } from '../../hooks/useLocalStorageFavorites';
 
-function FavoritePage() {
+const FavoritePage = () => {
+	const { favorites } = useLocalStorageFavorites();
+
 	return (
-		<section className="page page-favorite">
-			<>
-				<Header />
-			</>
-		</section>
+		<div className="page page-favorites">
+			<Header />
+			<main className="favorites-main">
+				<section className="favorites-section">
+					<h2 className="favorites-title">⭐ My Favorites ⭐</h2>
+
+					{favorites.length === 0 ? (
+						<p className="favorites-empty">No favorites added yet!</p>
+					) : (
+						<MovieList movieList={favorites} title="" />
+					)}
+				</section>
+			</main>
+		</div>
 	);
-}
+};
 
 export default FavoritePage;
