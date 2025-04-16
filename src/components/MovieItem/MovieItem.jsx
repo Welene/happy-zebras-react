@@ -28,7 +28,10 @@ function MovieItem({ movie, toggleFavorites, isFavorite }) {
 					alt={`poster of ${movie.Title}`}
 				/>
 			</figure>
-			<Link to={`/movie/${movie.imdbID}`} className="movie-item__title">
+			<Link
+				to={`/movie/${movie.imdbID}`}
+				aria-label={`Go to the movie "${movie.Title}" page`}
+				className="movie-item__title">
 				{movie.Title}
 			</Link>
 		</li>
