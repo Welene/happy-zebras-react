@@ -1,3 +1,4 @@
+
 import './homePage.css';
 import Header from '../../components/Header/Header';
 import MovieList from '../../components/MovieList/MovieList';

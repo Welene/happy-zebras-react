@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import missingPoster from '../../assets/missing-poster.svg';
 import { checkImageExists } from '../../Utils/utils';
 import { Link } from 'react-router-dom';
+import FavoriteButton from '../FavoriteButton/FavoriteButton';
 
-function MovieItem({ movie }) {
+function MovieItem({ movie, toggleFavorites, isFavorite }) {
 	const [poster, setPoster] = useState(movie.Poster);
 
 	useEffect(() => {
@@ -17,6 +18,11 @@ function MovieItem({ movie }) {
 	return (
 		<li className="movie-item">
 			<figure className="movie-item__image">
+				<FavoriteButton
+					toggleFavorites={toggleFavorites}
+					isFavorite={isFavorite}
+					movie={movie}
+				/>
 				<img
 					src={poster} // Ternär operator för att kontrollera om en poster finns
 					alt={movie.Title}
