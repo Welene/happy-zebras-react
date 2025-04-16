@@ -1,0 +1,28 @@
+.page-favorites {
+	background-color: black;
+	color: white;
+	min-height: 100vh;
+
+	font-family: 'Montserrat', sans-serif;
+}
+
+.favorites-main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.favorites-title {
+    padding: 1rem;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #ecc901;
+}
+
+.favorites-empty {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #cccccc;
+	padding: 2rem;
+}
