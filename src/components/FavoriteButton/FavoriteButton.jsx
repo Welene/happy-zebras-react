@@ -25,7 +25,7 @@ function FavoriteButton({
 
 	return (
 		<button
-			aria-label={`Mark ${movie.Title} as favorite`}
+			aria-label={`Mark ${movie.Title} as a favorite movie`}
 			className={`favorite-btn ${
 				position === 'relative' ? 'relative' : 'absolute'
 			}`}
