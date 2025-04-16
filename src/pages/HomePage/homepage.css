@@ -90,17 +90,7 @@
 	text-shadow: 0 0 5px #f2b600, 0 0 10px #f2b600;
 }
 
-.favorite-btn:hover {
-	transform: scale(1.1);
-}
 
-.favorite-btn::before {
-	content: "☆";
-}
-
-.favorite-btn.favorite::before {
-	content: "★";
-}
 
 /* ========== MOVIE CARD WRAPPER ========== */
 .movie-card-wrapper {
