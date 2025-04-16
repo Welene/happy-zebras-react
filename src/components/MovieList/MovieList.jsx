@@ -8,14 +8,16 @@ function MovieList({ movieList, title }) {
 		<section className="list-section">
 			<h1 className="list-section__header">{title}</h1>
 			<ul className="list-section__grid">
-				{movieList.map((movie, index) => (
-					<MovieItem
-						key={index}
-						movie={movie}
-						toggleFavorites={toggleFavorites}
-						isFavorite={isFavorite}
-					/>
-				))}
+				{Array.isArray(movieList) &&
+					movieList.map((movie, index) => (
+						<MovieItem
+							key={index}
+							movie={movie}
+							toggleFavorites={toggleFavorites}
+							isFavorite={isFavorite}
+						/>
+						// added a check if-array to make sure map can run safely on results page
+					))}
 			</ul>
 		</section>
 	);
