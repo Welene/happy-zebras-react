@@ -21,7 +21,7 @@ const MoviePage = () => {
 		const fetchMovieDetails = async () => {
 			try {
 				const response = await axios.get(
-					`https://www.omdbapi.com/?apikey=144f166d&i=${id}`
+					`https://www.omdbapi.com/?apikey=378ca18a&i=${id}`
 				);
 				if (response.data.Response === 'False')
 					throw new Error('Movie not found!');
