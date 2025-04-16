@@ -1,6 +1,7 @@
 import './homePage.css';
 import Header from '../../components/Header/Header';
-import MovieList from '../../components/MovieList/MovieList';
+import Carousel from '../../components/Carousel/Carousel';
+import MovieItem from '../../components/MovieItem/MovieItem';
 
 import React, { useState, useEffect } from 'react';
 
@@ -13,7 +14,9 @@ const HomePage = () => {
 	useEffect(() => {
 		const fetchRecommendedMovies = async () => {
 			try {
-				const res = await fetch('https://santosnr6.github.io/Data/favoritemovies.json');
+				const res = await fetch(
+					'https://santosnr6.github.io/Data/favoritemovies.json'
+				);
 				if (!res.ok) throw new Error('Failed to fetch movie data.');
 				const data = await res.json();
 				setRecommendedMovies(data);
@@ -24,7 +27,6 @@ const HomePage = () => {
 			}
 		};
 
-		// Get local favorites
 		const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
 		setFavorites(savedFavorites);
 
@@ -47,27 +49,28 @@ const HomePage = () => {
 			<Header />
 
 			<main>
-				{/* Placeholder for Carousel */}
-				<section className='carousel-section'>
-					{/* <Carousel /> */}
+				<section className="carousel-section">
+					<Carousel />
 				</section>
 
-				<section className='recommendation-section'>
+				<section className="recommendation-section">
 					{loading && <p>Loading...</p>}
-					{error && <p className='error'>{error}</p>}
+					{error && <p className="error">{error}</p>}
 
 					{!loading && !error && (
 						<section className="list-section">
 							<h1 className="list-section__header">🎬 Our Recommendations 🎬</h1>
+
 							<ul className="list-section__grid">
 								{recommendedMovies.map((movie, index) => (
 									<li className="movie-card-wrapper" key={index}>
 										<div className="favorite-card-container">
 											<button
-												className={`favorite-btn ${favorites.includes(movie.imdbID) ? 'favorite' : ''}`}
+												className={`favorite-btn ${favorites.includes(movie.imdbID) ? 'favorite' : ''
+													}`}
 												onClick={() => toggleFavorite(movie.imdbID)}
 											></button>
-											<MovieList movieList={[movie]} />
+											<MovieItem movie={movie} />
 										</div>
 									</li>
 								))}
