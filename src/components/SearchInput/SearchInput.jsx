@@ -16,6 +16,7 @@ function SearchInput() {
 	return (
 		<section className="search-section">
 			<input
+				aria-label="Search for movies on MMDB"
 				type="text"
 				className="search-section__search-field"
 				value={searchValue}
@@ -25,6 +26,7 @@ function SearchInput() {
 			/>
 			<button
 				// Checking if input is empty - if empty - prevents navigation
+				aria-label="Search MMDB"
 				className="search-section__btn"
 				onClick={() => {
 					if (searchValue === '') {
