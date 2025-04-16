@@ -17,8 +17,7 @@
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
-	text-transform: capitalize;
-	margin-bottom: 1rem;
+	text-transform: capitalize;	
 }
 
 .movie-detail-wrapper {
@@ -63,15 +62,7 @@
 	padding-right: 20px;
 }
 
-.movie-page__star {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	width: 32px;
-	height: auto;
-	cursor: pointer;
-	z-index: 1;
-}
+
 
 .section-divider {
 	border: 0;
@@ -80,12 +71,7 @@
 	margin: 10px 0;
 }
 
-.more-link {
-	color: #f5c518;
-	text-decoration: underline;
-	cursor: pointer;
-	font-weight: 500;
-}
+
 
 .movie-meta {
 	display: flex;
