@@ -1,31 +1,26 @@
+/* ========== RESET ========== */
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-.recommendation-section {
-	padding: 2rem;
-	text-align: center;
+.page-home {
+	background-color: var(--primary-bg);
 }
 
-.recommendation-section h2 {
-	font-size: 2rem;
-	margin-bottom: 1.5rem;
-}
 
-/* carousel-*SECTION*-only styling */
 
+/* ========== CAROUSEL SECTION ========== */
 .carousel-section {
+	margin-top: -2rem;
 	flex-direction: row;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	margin-bottom: 2rem;
 	min-height: 30rem;
 	border-bottom: 1px solid white;
-	margin-bottom: 2rem;
 	transform: scale(0.85);
 	transform-origin: center;
 }
@@ -48,4 +43,57 @@
 .carousel-section::after {
 	background: linear-gradient(to left, var(--primary-bg) 20%, transparent);
 	right: 0px;
+}
+
+/* ========== RECOMMENDATION SECTION ========== */
+
+.list-section__header {
+	text-align: center;
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/* ========== MOVIE GRID ========== */
+.list-section__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	justify-items: center;
+	padding: 1rem 0;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+/* ========== FAVORITE STAR BUTTON ========== */
+.favorite-card-container {
+	position: relative;
+	display: inline-block;
+}
+
+.favorite-btn {
+	position: absolute;
+	right: 0px;
+	background: rgb(79, 76, 76);
+	border: none;
+	font-size: 3rem;
+	color: #f2b600;
+	padding: 0;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+	z-index: 10;
+	font-family: 'Segoe UI Symbol', Arial, sans-serif;
+	text-shadow: 0 0 5px #f2b600, 0 0 10px #f2b600;
+}
+
+
+
+/* ========== MOVIE CARD WRAPPER ========== */
+.movie-card-wrapper {
+	list-style: none;
+	position: relative;
 }
