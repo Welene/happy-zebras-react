@@ -1,7 +1,7 @@
 export async function checkImageExists(url) {
 	if (!url || url === 'N/A' || !url.startsWith('http')) {
 		console.log('Invalid URL:', url);
-		return './src/assets/missing-poster.svg';
+		return '../src/assets/missing-poster.svg';
 	}
 
 	try {
@@ -18,6 +18,6 @@ export async function checkImageExists(url) {
 		return url;
 	} catch (error) {
 		console.log('Error:', error.message);
-		return './src/assets/missing-poster.svg'; // Fallback-bild missing-poster.svg
+		return '../src/assets/missing-poster.svg'; // Fallback-bild missing-poster.svg
 	}
 }

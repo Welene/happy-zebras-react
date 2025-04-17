@@ -11,17 +11,18 @@ import { useLocalStorageFavorites } from '../../hooks/useLocalStorageFavorites';
 const MoviePage = () => {
 	const { id } = useParams();
 	const [movie, setMovie] = useState(null);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
-
 	const { favorites, toggleFavorites, isFavorite } =
 		useLocalStorageFavorites();
+	const APIKEY = '378ca18a';
+
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		const fetchMovieDetails = async () => {
 			try {
 				const response = await axios.get(
-					`https://www.omdbapi.com/?apikey=378ca18a&i=${id}`
+					`https://www.omdbapi.com/?apikey=${APIKEY}&plot=full&i=${id}`
 				);
 				if (response.data.Response === 'False')
 					throw new Error('Movie not found!');
@@ -36,8 +37,8 @@ const MoviePage = () => {
 		fetchMovieDetails();
 	}, [id]);
 
-	if (loading) return <p className="movie-page__loading">Loading...</p>;
-	if (error) return <p className="movie-page__error">Error: {error}</p>;
+	if (loading) return <p className="error-p">Loading...</p>;
+	if (error) return <p className="error-p">Error: {error}</p>;
 
 	return (
 		<div className="page page-movie">
