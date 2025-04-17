@@ -9,12 +9,14 @@ const FavoritePage = () => {
 	return (
 		<div className="page page-favorites">
 			<Header />
-			<main className="favorites-main">
+			<main>
 				<section className="favorites-section">
 					<h2 className="favorites-title">⭐ My Favorites ⭐</h2>
 
 					{favorites.length === 0 ? (
-						<p className="favorites-empty">No favorites added yet!</p>
+						<p className="favorites-empty">
+							No favorites added yet!
+						</p>
 					) : (
 						<MovieList movieList={favorites} title="" />
 					)}

@@ -59,7 +59,9 @@ const MoviePage = () => {
 						<img
 							className="movie-page__poster"
 							src={
-								movie.Poster !== 'N/A' ? movie.Poster : missingPoster
+								movie.Poster !== 'N/A'
+									? movie.Poster
+									: missingPoster
 							}
 							alt={`${movie.Title} Poster`}
 						/>
@@ -87,25 +89,30 @@ const MoviePage = () => {
 						<hr className="section-divider" />
 						<p>
 							<strong>Plot:</strong>{' '}
-							{showFullPlot ? movie.Plot : getShortPlot(movie.Plot)}
+							{showFullPlot
+								? movie.Plot
+								: getShortPlot(movie.Plot)}
 							<button
 								onClick={() => setShowFullPlot((prev) => !prev)}
 								style={{
 									marginLeft: '0.5rem',
-									color: '#f5c518',
+									color: 'var(--yellow-clr)',
 									background: 'none',
 									border: 'none',
 									cursor: 'pointer',
 									fontWeight: 'bold',
 									fontFamily: 'inherit',
 									fontSize: '1rem',
+									textDecoration: 'underline',
 								}}>
 								{showFullPlot ? 'Read less' : 'Read more'}
 							</button>
 						</p>
 						<hr className="section-divider" />
 						<section className="movie-meta">
-							<p className="meta-item">Director: {movie.Director}</p>
+							<p className="meta-item">
+								Director: {movie.Director}
+							</p>
 							<p className="meta-item">Writer: {movie.Writer}</p>
 							<p className="meta-item">Actors: {movie.Actors}</p>
 						</section>

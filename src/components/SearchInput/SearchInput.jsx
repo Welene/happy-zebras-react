@@ -14,7 +14,7 @@ function SearchInput() {
 	const navigate = useNavigate();
 	// en hook fra react-biblioteket - lar deg bruke en funksjon (navigate-funksjonen) til å navigere når den sendes som prop til handleSearch
 	return (
-		<section className="search-section">
+		<form className="search-section">
 			<input
 				aria-label="Search for movies on MMDB"
 				type="text"
@@ -38,7 +38,7 @@ function SearchInput() {
 				{/* button listens to a click - when clicked - calls handleSearch function and sends 'navigate' & 'searchValue' prop with it */}
 				Search
 			</button>
-		</section>
+		</form>
 	);
 }
 

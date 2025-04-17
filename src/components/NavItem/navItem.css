@@ -9,3 +9,9 @@
 .navigation-section__favorites:hover {
 	color: rgb(255, 230, 0);
 }
+
+@media screen and (max-width: 768px) {
+	.navigation-section__favorites {
+		font-size: 0.9rem;
+	}
+}

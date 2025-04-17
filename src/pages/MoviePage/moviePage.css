@@ -5,18 +5,12 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-.movie-page-main {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-
 .movie-details-title {
 	padding: 1rem;
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
-	text-transform: capitalize;	
+	text-transform: capitalize;
 }
 
 .movie-detail-wrapper {
@@ -61,16 +55,12 @@
 	padding-right: 20px;
 }
 
-
-
 .section-divider {
 	border: 0;
 	height: 1px;
 	background-color: white;
 	margin: 10px 0;
 }
-
-
 
 .movie-meta {
 	display: flex;
