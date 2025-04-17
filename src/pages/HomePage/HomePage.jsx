@@ -2,8 +2,6 @@ import './homePage.css';
 import Header from '../../components/Header/Header';
 import MovieList from '../../components/MovieList/MovieList';
 import Carousel from '../../components/Carousel/Carousel';
-
-import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 
 const HomePage = () => {
@@ -18,7 +16,6 @@ const HomePage = () => {
 		<div className="page page-home">
 			<Header />
 			<main>
-				{/* Trailor Carousel from Helene */}
 				<section className="carousel-section">
 					<Carousel />
 				</section>
