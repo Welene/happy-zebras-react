@@ -23,8 +23,11 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-.app {
+main {
 	max-width: 1100px;
+}
+
+.app {
 	margin: 0 auto;
 	min-height: 100vh;
 }
@@ -32,6 +35,9 @@ body {
 .page {
 	min-height: 100vh;
 	background-color: var(--black-bg);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 .d-none {
 	display: none;
@@ -41,5 +47,5 @@ body {
 	font-size: 2rem;
 	color: var(--yellow-clr);
 	text-align: center;
-	margin-top: 4rem;
+	margin-top: 6rem;
 }

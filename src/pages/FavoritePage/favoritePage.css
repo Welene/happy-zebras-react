@@ -6,14 +6,8 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-.favorites-main {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-
 .favorites-title {
-    padding: 1rem;
+	padding: 1rem;
 	text-align: center;
 	font-size: 2rem;
 	font-weight: bold;
