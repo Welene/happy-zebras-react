@@ -14,8 +14,9 @@ import { checkImageExists } from '../../Utils/utils';
 
 function ResultsPage() {
 	const { search } = useParams();
+	const APIKEY = '378ca18a';
 	// henter search fra path fra URL ved hjelp av useParams funksjonen
-	const searchUrl = `http://www.omdbapi.com/?apikey=144f166d&s=${search}`;
+	const searchUrl = `http://www.omdbapi.com/?apikey=${APIKEY}&s=${search}`;
 	// tar API-URL-en fra useFetchSearch og legger på search
 	const { data, isLoading, isError } = useSearchFetch(searchUrl);
 	// anropet useSearchFetch funksjonen og sender den searchUrl som parameter, sånn at funksjonen vet hva den skal søke på

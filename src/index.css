@@ -36,3 +36,10 @@ body {
 .d-none {
 	display: none;
 }
+
+.error-p {
+	font-size: 2rem;
+	color: var(--yellow-clr);
+	text-align: center;
+	margin-top: 4rem;
+}
