@@ -96,7 +96,7 @@ const MoviePage = () => {
 								onClick={() => setShowFullPlot((prev) => !prev)}
 								style={{
 									marginLeft: '0.5rem',
-									color: '#f5c518',
+									color: 'var(--yellow-clr)',
 									background: 'none',
 									border: 'none',
 									cursor: 'pointer',
