@@ -21,11 +21,19 @@ function Carousel() {
 	const [activeTrailer, setActiveTrailer] = useState(0);
 
 	const nextTrailer = () => {
-		setActiveTrailer((prev) => (prev + 1) % movies.length);
+		setActiveTrailer((prev) => {
+			const newIndex = (prev + 1) % movies.length;
+			console.log('Tidligere indeks:', prev, 'Ny indeks:', newIndex);
+			return newIndex;
+		});
 	};
 
 	const prevTrailer = () => {
-		setActiveTrailer((prev) => (prev - 1 + movies.length) % movies.length);
+		setActiveTrailer((prev) => {
+			const newIndex = (prev - 1 + movies.length) % movies.length;
+			console.log('Tidligere indeks:', prev, 'Ny indeks:', newIndex);
+			return newIndex;
+		});
 	};
 
 	return (
