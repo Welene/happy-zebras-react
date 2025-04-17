@@ -23,13 +23,12 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-main {
-	max-width: 1100px;
-}
-
 .app {
 	margin: 0 auto;
 	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .page {
@@ -38,6 +37,8 @@ main {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	max-width: 1100px;
+	align-self: center;
 }
 .d-none {
 	display: none;
