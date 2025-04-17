@@ -29,3 +29,11 @@
 	cursor: pointer;
 	background-color: rgb(255, 230, 0);
 }
+
+@media screen and (max-width: 768px) {
+	.search-section__search-field,
+	.search-section {
+		min-height: 0;
+		min-width: 0;
+	}
+}
