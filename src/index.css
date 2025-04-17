@@ -1,14 +1,46 @@
 :root {
-	/* lägg till variabler som kan återanvändas här - färger, font-styles */
-
-	/* sen för att hämta/använda denna variabel (exempel): 
-  '.indexpage__section {
-      background-color: var(NamnPåVariabel)';
-  } */
+	--black-bg: #000000;
+	--dark-grey-bg: #181818;
+	--light-grey-clr: #999999;
+	--yellow-clr: #ecc901;
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	background-color: var(--black-bg);
+	font-family: Arial, sans-serif;
+}
+
+.app {
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.page {
+	min-height: 100vh;
+	background-color: var(--black-bg);
+	box-shadow: 1px 0px 13px 5px rgb(126, 126, 126);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-width: 1100px;
+	align-self: center;
+}
+.d-none {
+	display: none;
+}
+
+.error-p {
+	font-size: 2rem;
+	color: var(--yellow-clr);
+	text-align: center;
+	margin-top: 6rem;
 }

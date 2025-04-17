@@ -1,0 +1,16 @@
+.list-section,
+.list-section__grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	/* margin-bottom: 2rem; */
+}
+
+.list-section__header {
+	color: #ffff;
+	font-size: 1.7rem;
+}

@@ -1,0 +1,49 @@
+.favorite-btn {
+	padding: 0.2rem;
+	background-color: #000000d0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	border: none;
+	border-bottom-left-radius: 10px;
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+
+	svg {
+		transition: 0.1s all ease-in-out;
+	}
+	svg:hover {
+		filter: brightness(1.2);
+	}
+	svg:active {
+		transform: scale(0.8);
+	}
+}
+
+.favorite-btn:hover {
+	background-color: #000000e2;
+}
+
+.favorite-btn.absolute {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+}
+
+.favorite-btn.relative {
+	position: relative;
+	width: 10%;
+	background-color: transparent;
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+	.favorite-btn.relative {
+		position: absolute;
+		background-color: #0000008e;
+		height: 7%;
+	}
+}
