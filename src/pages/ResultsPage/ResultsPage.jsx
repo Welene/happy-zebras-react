@@ -5,26 +5,35 @@ import { useSearchFetch } from '../../hooks/useSearchFetch';
 import MovieList from '../../components/MovieList/MovieList';
 import './resultsPage.css';
 
-import missingPoster from '../../assets/missing-poster.svg';
-import { checkImageExists } from '../../Utils/utils';
-// NESTE GANG:
-// LEGGE TIL EN FALLBACK OM BILDET (poster) IKKE FINNES
-// Sånn at man ikke får errors i konsollen
-// VIS missing-profile.svg (elns) OM POSTER IKKE EKSISTERER FOR FILMEN
-
 function ResultsPage() {
 	const { search } = useParams();
 	const APIKEY = '378ca18a';
-	// henter search fra path fra URL ved hjelp av useParams funksjonen
 	const searchUrl = `http://www.omdbapi.com/?apikey=${APIKEY}&s=${search}`;
-	// tar API-URL-en fra useFetchSearch og legger på search
 	const { data, isLoading, isError } = useSearchFetch(searchUrl);
-	// anropet useSearchFetch funksjonen og sender den searchUrl som parameter, sånn at funksjonen vet hva den skal søke på
+	// gets data, isLoading & isError from useSearchFetch, mixes it with our own (searchUrl) search to check response/results
+
+	if (isLoading) return <p className="error-p">Loading...</p>;
+	// if the page is loading - shows a loading msg
+
+	if (isError || (Array.isArray(data) && data.length === 0)) {
+		// isError = false API call *OR* data length is 0 (no movies / empty array) ...
+		return (
+			<section className="page page-results">
+				<Header />
+
+				<p className="error-p">
+					{/* then the page shows an error msg with the movie you searched for */}
+					'{search}' is not here - try another movie?
+				</p>
+			</section>
+		);
+	}
+
 	return (
 		<section className="page page-results">
 			<Header />
 			<MovieList
-				title={'🎬 Search Results 🎬'}
+				title={`🎬 Search Results 🎬`}
 				movieList={Array.isArray(data) ? data : []}
 			/>
 		</section>
