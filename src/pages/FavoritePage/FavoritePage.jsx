@@ -11,7 +11,7 @@ const FavoritePage = () => {
 			<Header />
 			<main>
 				<section className="favorites-section">
-					<h2 className="favorites-title">⭐ My Favorites ⭐</h2>
+					<h1 className="favorites-title">⭐ My Favorites ⭐</h1>
 
 					<section className="favorites-content-box">
 						{favorites.length === 0 ? (
@@ -19,14 +19,13 @@ const FavoritePage = () => {
 								No favorites added yet!
 							</p>
 						) : (
-							<MovieList movieList={favorites} title="" />
+							<MovieList movieList={favorites} title="empty" />
 						)}
 					</section>
 				</section>
 			</main>
 		</div>
 	);
-
 };
 
 export default FavoritePage;

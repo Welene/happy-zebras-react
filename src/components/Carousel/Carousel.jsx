@@ -8,11 +8,17 @@ function Carousel() {
 
 	useEffect(() => {
 		const fetchTopMovies = async () => {
-			const response = await fetch(
-				'https://santosnr6.github.io/Data/favoritemovies.json'
-			);
-			const movies = await response.json();
-			setMovies(movies);
+			try {
+				const response = await fetch(
+					'https://santosnr6.github.io/Data/favoritemovies.json'
+				);
+				if (response.data === 'False')
+					throw new Error('Movie not found!');
+				const movies = await response.json();
+				setMovies(movies);
+			} catch (error) {
+				console.log(error);
+			}
 		};
 
 		fetchTopMovies();
@@ -23,7 +29,6 @@ function Carousel() {
 	const nextTrailer = () => {
 		setActiveTrailer((prev) => {
 			const newIndex = (prev + 1) % movies.length;
-			console.log('Tidligere indeks:', prev, 'Ny indeks:', newIndex);
 			return newIndex;
 		});
 	};
@@ -31,7 +36,6 @@ function Carousel() {
 	const prevTrailer = () => {
 		setActiveTrailer((prev) => {
 			const newIndex = (prev - 1 + movies.length) % movies.length;
-			console.log('Tidligere indeks:', prev, 'Ny indeks:', newIndex);
 			return newIndex;
 		});
 	};
