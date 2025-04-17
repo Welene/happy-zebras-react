@@ -1,6 +1,5 @@
 import './MovieItem.css';
 import React, { useEffect, useState } from 'react';
-import missingPoster from '../../assets/missing-poster.svg';
 import { checkImageExists } from '../../Utils/utils';
 import { Link } from 'react-router-dom';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';

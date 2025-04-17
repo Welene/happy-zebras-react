@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
 import './errorPage.css';
 
 function ErrorPage() {
 	return (
-		<section className="page page-error">
+		<main className="page page-error">
 			<figure className="page-error__image-container">
 				<img
 					src="../src/assets/404-error.svg"
-					alt="Not found"
+					alt="404 picture"
 					className="page-error__image"
 				/>
 			</figure>
@@ -21,7 +20,7 @@ function ErrorPage() {
 			<Link to="/" className="page-error__button">
 				Go to homepage
 			</Link>
-		</section>
+		</main>
 	);
 }
 

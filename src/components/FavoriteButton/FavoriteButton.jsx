@@ -1,9 +1,5 @@
 import './favoriteButton.css';
 import React, { useEffect, useState } from 'react';
-// import { useLocalStorageFavorites } from '../../hooks/useLocalStorageFavorites';
-
-// import { ReactComponent as StarIcon } from '../../assets/star.svg';
-
 function FavoriteButton({
 	movie,
 	toggleFavorites,
@@ -11,8 +7,6 @@ function FavoriteButton({
 	position = 'absolute',
 }) {
 	const [isFilled, setIsFilled] = useState(false);
-	// const { favorites, toggleFavorites, isFavorite } =
-	// 	useLocalStorageFavorites();
 
 	useEffect(() => {
 		setIsFilled(isFavorite(movie.imdbID));

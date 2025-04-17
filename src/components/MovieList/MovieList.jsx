@@ -6,7 +6,12 @@ function MovieList({ movieList, title }) {
 		useLocalStorageFavorites();
 	return (
 		<section className="list-section">
-			<h1 className="list-section__header">{title}</h1>
+			{title === 'empty' ? (
+				<p></p>
+			) : (
+				<h1 className="list-section__header">{title}</h1>
+			)}
+
 			<ul className="list-section__grid">
 				{Array.isArray(movieList) &&
 					movieList.map((movie, index) => (

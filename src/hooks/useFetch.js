@@ -22,5 +22,3 @@ export const useFetch = (url) => {
 
 	return { data, isLoading, isError };
 };
-
-// useFetch("http://www.omdbapi.com/?apikey=[yourkey]&s=[söksträng]")
