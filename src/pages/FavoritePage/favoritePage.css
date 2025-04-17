@@ -20,3 +20,11 @@
 	color: #cccccc;
 	padding: 2rem;
 }
+
+.favorites-content-box {
+	background-color: #1a1a1a;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto;
+	max-width: 1200px;
+}

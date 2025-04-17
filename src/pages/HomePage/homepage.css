@@ -47,14 +47,11 @@
 
 /* ========== RECOMMENDATION SECTION ========== */
 
+.recommendation-section {
+	margin-top: -3rem;
+}
 .list-section__header {
-	text-align: center;
-	color: white;
-	font-size: 2rem;
-	margin-bottom: 1.5rem;
-	text-align: center;
-	font-weight: bold;
-	text-transform: capitalize;
+	margin-bottom: 1rem;	
 }
 
 /* ========== MOVIE GRID ========== */
